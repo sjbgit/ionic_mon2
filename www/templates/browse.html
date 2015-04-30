@@ -1,0 +1,15 @@
+<ion-view view-title="Browse">
+  <ion-content>
+    <h1>Monitor</h1>
+	<ion-list>
+      <ion-item ng-repeat="mc in machineCounters" href="#/app/playlists/{{playlist.id}}">
+        {{mc.machine}} - {{mc.dateTime}}
+		<ion-list>
+			<ion-item ng-repeat="ctr in mc.counters">
+			Counter: {{ctr.counter}} - Value: {{ctr.value}}
+			</ion-item>
+		</ion-list>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
